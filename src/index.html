@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR БОЛЬШОЙ ЦАРЬ-КОНФИГУРАТОР 2022</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="config">
+        //= template/sprite.html
+
+        <p class="config__title">Выбери конфигурацию</p>
+
+        <div class="config__layout">
+            <div class="config__left-block">
+                //= template/params.html
+            </div>
+            <div class="config__right-block">
+                <div class="config__top">
+                    <div class="config__top-button-block">
+                        <button class="btn" type="button">Фильтр по параметрам</button>
+                    </div>
+                    <div class="config__fast-filters">
+                        <button class="config__fast-filters-button" type="button">
+                            Сбросить фильтры
+
+                        </button>
+                    </div>
+                </div>
+                карточки
+            </div>
+        </div>
+
+        //= template/cards_2.html
+
+        <div class="popup-shade">
+            <div class="popup-shade__inner">
+                //= template/dialog.html
+
+                //= template/kp.html
+
+                //= template/popup-test.html
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/select2.full.min.js"></script>
+<script src="js/select2-addon.js"></script>
+<script src="js/params.js"></script>
+<script src="js/main.js"></script>
+
+</html>

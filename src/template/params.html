@@ -1,0 +1,400 @@
+<div class="params">
+    <button class="params__closer" type="button" title="Закрыть">
+        <svg aria-hidden="true">
+            <use xlink:href="#new_close"></use>
+        </svg>
+    </button>
+
+    <p class="params__title">Параметры</p>
+
+    <div class="params__filter-opener-block">
+        <button class="js-popup-opener btn" type="button" data-popup="js-popup-test">Подобрать под игры</button>
+    </div>
+
+    <div class="params__prefilter">
+        <p class="params__prefilter-title">Быстрый префильтр:</p>
+        <ul class="params__prefilter-list">
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для FHD</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для 2К</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для 4К</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для 3D дизайнера</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для видеомонтажа</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Для стримминга</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">ААА-тайтлы</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">для киберспорта</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">battle royal</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Кастомная СО</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">Всё на ультра</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">60 fps</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">120 fps</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">240 fps</button>
+            </li>
+            <li class="params__prefilter-item">
+                <button class="params__prefilter-btn" type="button">до 100 000 руб.</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="params__tags-filter">
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__icon"></span>
+            Хит продаж
+        </label>
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__icon"></span>
+            Новинка
+        </label>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Цена
+        </button>
+        <div class="params__section-dropdown is-active">
+            <label class="checkbox disabled">
+                <input type="checkbox" disabled>
+                <span class="checkbox__icon"></span>
+                менее 100 000
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                От 100 000
+            </label>
+            <label class="checkbox disabled">
+                <input type="checkbox" disabled checked>
+                <span class="checkbox__icon"></span>
+                от 200 000
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                от 300 000
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                от 400 000
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Бюджет не важен
+            </label>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Графика в играх
+        </button>
+        <div class="params__section-dropdown is-active">
+            <div class="params__section-radios">
+                <div class="radios-group">
+                    <label class="radios-group__item">
+                        <input type="radio" name="graphic" value="Standart" checked>
+                        <span class="radios-group__item-inner">Standart</span>
+                    </label>
+                    <label class="radios-group__item">
+                        <input type="radio" name="graphic" value="High">
+                        <span class="radios-group__item-inner">High</span>
+                    </label>
+                    <label class="radios-group__item">
+                        <input type="radio" name="graphic" value="Ultra">
+                        <span class="radios-group__item-inner">Ultra</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Процессор
+        </button>
+        <div class="params__section-dropdown is-active">
+            <p class="params__section-title">Производительность:</p>
+            <div class="params__section-radios">
+                <div class="radios-group">
+                    <label class="radios-group__item">
+                        <input type="radio" name="performance" value="Высокая" checked>
+                        <span class="radios-group__item-inner">Высокая</span>
+                    </label>
+                    <label class="radios-group__item">
+                        <input type="radio" name="performance" value="Максимальная">
+                        <span class="radios-group__item-inner">Максимальная</span>
+                    </label>
+                </div>
+            </div>
+            <div class="params__section-radios">
+                <div class="radios-group radios-group--type_2">
+                    <label class="radios-group__item">
+                        <input type="radio" name="vendor" value="AMD">
+                        <span class="radios-group__item-inner">AMD</span>
+                    </label>
+                    <label class="radios-group__item">
+                        <input type="radio" name="vendor" value="Intel" checked>
+                        <span class="radios-group__item-inner">Intel</span>
+                    </label>
+                </div>
+            </div>
+            <div class="params__section-list-outer">
+                <div class="params__section-list">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        I9 12 900KF 5.2 ГГц
+                    </label>
+                </div>
+                <button class="js-list-toggler params__section-list-toggler" type="button">
+                    <span>Показать всё</span>
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Форм фактор
+        </button>
+        <div class="params__section-dropdown is-active">
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Компактные
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Стандарт
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Фуллтовер
+            </label>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Тип охлаждения
+        </button>
+        <div class="params__section-dropdown is-active">
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Воздушное
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Жидкостное
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Кастомное
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Бесшумное
+            </label>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Внешний вид
+        </button>
+        <div class="params__section-dropdown is-active">
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Разворот видеокарты
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon"></span>
+                Подсветка
+            </label>
+        </div>
+    </div>
+
+    <div class="params__section">
+        <button class="js-section-toggler params__section-toggler is-active" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+            </svg>
+            Доп. параметры
+        </button>
+        <div class="params__section-dropdown is-active">
+            <div class="params__subsection">
+                <button class="js-subsection-toggler params__subsection-toggler" type="button">
+                    Операционная система
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="params__subsection-dropdown"></div>
+            </div>
+            <div class="params__subsection">
+                <button class="js-subsection-toggler params__subsection-toggler" type="button">
+                    Подключение к интернету
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="params__subsection-dropdown"></div>
+            </div>
+            <div class="params__subsection">
+                <button class="js-subsection-toggler params__subsection-toggler" type="button">
+                    Системный ССД
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="params__subsection-dropdown"></div>
+            </div>
+            <div class="params__subsection">
+                <button class="js-subsection-toggler params__subsection-toggler is-active" type="button">
+                    Дополнительный ССД
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="params__subsection-dropdown is-active">
+                    <div class="params__section-radios">
+                        <div class="radios-group radios-group--type_2">
+                            <label class="radios-group__item">
+                                <input type="radio" name="ssd" value="NVME">
+                                <span class="radios-group__item-inner">SSD NVME</span>
+                            </label>
+                            <label class="radios-group__item">
+                                <input type="radio" name="ssd" value="SATA" checked>
+                                <span class="radios-group__item-inner">SSD SATA</span>
+                            </label>
+                        </div>
+
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__icon"></span>
+                            1 TB
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__icon"></span>
+                            2 TB
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="params__subsection">
+                <button class="js-subsection-toggler params__subsection-toggler" type="button">
+                    Жесткий диск
+                    <svg aria-hidden="true">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="params__subsection-dropdown"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="params__buttons">
+        <button class="btn btn--type_5" type="reset">Сбросить</button>
+        <button class="btn btn--type_2" type="submit">Применить</button>
+    </div>
+</div>
