@@ -35,12 +35,24 @@ $(document).on('click', '.js-list-toggler', function () {
   return false;
 });
 
-//тогглер подраздела парамтров
+//тогглер подраздела параметров
 $(document).on('click', '.js-subsection-toggler', function () {
   $(this).toggleClass('is-active');
   $(this).closest('.params__subsection').find('.params__subsection-dropdown').slideToggle(function () {
     $(this).toggleClass('is-active');
   });
+
+  return false;
+});
+
+//кнопка применить
+$(document).on('change', '.params input[type="checkbox"]', function () {
+  var topOffset = $(this).closest('label').offset().top - $(this).closest('.params').offset().top + $(this).closest('label').height()/2;
+  $('.params__apply').css('top', topOffset).addClass('is-active');
+});
+
+$(document).on('click', '.params__apply', function () {
+  $(this).removeClass('is-active');
 
   return false;
 });

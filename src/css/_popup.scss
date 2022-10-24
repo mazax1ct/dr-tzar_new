@@ -67,6 +67,29 @@
         }
     }
 
+    &--type_3 {
+        font-size: 14px;
+        max-width: 340px;
+        min-height: 370px;
+        padding-top: 56px;
+        text-align: center;
+        @media(min-width: $sm) {
+            min-height: 370px;
+            max-width: 340px;
+        }
+
+        .popup__title {
+            font-size: 18px;
+        }
+
+        .popup__buttons {
+            flex-direction: row;
+            margin-top: 160px;
+            justify-content: center;
+            gap: 0 24px;
+        }
+    }
+
     &__close {
         align-items: center;
         border: none;

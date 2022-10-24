@@ -5,6 +5,7 @@
     padding-top: 16px;
     @media(min-width: $hd) {
         height: auto;
+        position: relative;
     }
     @media(min-width: $fhd) {
         box-shadow: 0 0 8px 0 rgba($main_color, 0.5);
@@ -329,6 +330,33 @@
                 font-size: 16px;
                 min-height: 36px;
             }
+        }
+    }
+
+    &__apply {
+        border: none;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width='137' height='56' viewBox='0 0 137 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.804 0C12.0319 0 10.5952 1.43662 10.5952 3.20879L10.5952 15.2914C10.5952 17.0105 9.90552 18.6577 8.68064 19.864L0 28.4124L8.68064 36.9609C9.90552 38.1672 10.5952 39.8144 10.5952 41.5335L10.5952 52.7912C10.5952 54.5634 12.0319 56 13.804 56L133.791 56C135.563 56 137 54.5634 137 52.7912V3.20879C137 1.43662 135.563 0 133.791 0L13.804 0Z' fill='%23D43C38'/%3E%3C/svg%3E%0A");
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        display: none;
+        height: 56px;
+        left: 100%;
+        padding-left: 24px;
+        position: absolute;
+        text-align: left;
+        transform: translateY(-50%);
+        top: auto;
+        width: 137px;
+        z-index: 1;
+        @media(max-width: $hd - 1px) {
+            display: none !important;
+        }
+
+        &.is-active {
+            display: block;
         }
     }
 }
