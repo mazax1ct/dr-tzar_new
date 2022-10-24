@@ -145,15 +145,19 @@
             background-color: $main_color;
             border-radius: 2px;
             content: '';
-            height: 18px;
+            height: 14px;
             left: 50%;
             opacity: 0;
             position: absolute;
             top: 50%;
             transform: translate(-50%, -50%);
             transition: opacity 0.3s;
-            width: 18px;
+            width: 14px;
             z-index: 1;
+            @media(min-width: $fhd) {
+                height: 18px;
+                width: 18px;
+            }
         }
     }
 }

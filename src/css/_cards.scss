@@ -1,42 +1,9 @@
 .cards {
-    margin-left: -6px;
-    margin-right: -6px;
     position: relative;
-    @media(min-width: $sm) {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1264px;
-    }
-    @media(min-width: $fhd) {
-        max-width: 1898px;
-    }
-    @media(min-width: $ufhd) {
-        max-width: 2018px;
-    }
 
-    &__list {
-        @media(min-width: $hd) {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
+    &__list {}
 
-    &__list-item {
-        margin-bottom: 16px;
-        @media(min-width: $hd) {
-            padding-left: 8px;
-            padding-right: 8px;
-            width: 50%;
-        }
-        @media(min-width: $fhd) {
-            width: 33.33333%;
-        }
-        @media(min-width: $ufhd) {
-            margin-bottom: 24px;
-            padding-left: 28px;
-            padding-right: 28px;
-        }
-    }
+    &__list-item {}
 
     &--no_cards {
         display: block;
@@ -94,22 +61,321 @@
             }
         }
     }
+
+    &.tiles-view {
+        .cards__list {
+            margin-left: -10px;
+            margin-right: -10px;
+            @media(min-width: $sm) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            @media(min-width: $hd) and (max-width: $fhd - 1px) {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            @media(min-width: $fhd) {
+                margin-left: -12px;
+                margin-right: -12px;
+            }
+        }
+
+        .cards__list-item {
+            margin-bottom: 24px;
+            padding-left: 10px;
+            padding-right: 10px;
+            @media(min-width: $sm) {
+                width: 50%;
+            }
+            @media(min-width: $hd) and (max-width: $fhd - 1px) {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            @media(min-width: 1600px) {
+                margin-bottom: 32px;
+                padding-left: 12px;
+                padding-right: 12px;
+                width: 33.33333%;
+            }
+        }
+
+        .card {
+            box-shadow: 0 0 8px 0 rgba($main_color, 0.5);
+        }
+
+        .card__chars {
+            display: none;
+        }
+
+        .card__slider-block {
+            img {
+                max-width: 230px;
+            }
+        }
+
+        .card__config-button {
+            bottom: 24px;
+            left: 50%;
+            position: absolute;
+            padding-left: 16px;
+            padding-right: 16px;
+            transform: translateX(-50%);
+            top: auto;
+            z-index: 1;
+        }
+    }
+
+    &.list-view {
+        .cards__list {
+            @media(min-width: $sm) and (max-width: $hd - 1px) {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+        }
+
+        .cards__list-item {
+            margin-bottom: 24px;
+            @media(max-width: $hd - 1px) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @media(min-width: $sm) and (max-width: $hd - 1px) {
+                width: 50%;
+            }
+        }
+
+        .card {
+            box-shadow: 0 0 8px 0 rgba(#fff, 0.5);
+            padding: 0;
+            @media(max-width: $hd - 1px) {
+                padding-bottom: 74px;
+            }
+        }
+
+        .card__top {
+            @media(min-width: $hd) {
+                align-items: center;
+                background: none;
+                flex-direction: row;
+                padding: 16px;
+            }
+            @media(min-width: $fhd) {
+                padding: 24px;
+            }
+        }
+
+        .card__text-block {
+            @media(min-width: $hd) {
+                order: 2;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            @media(min-width: 1350px) {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            @media(min-width: $fhd) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        .card__title-block {
+            @media(min-width: $hd) {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+            }
+            @media(min-width: $fhd) {
+                margin-bottom: 16px;
+            }
+        }
+
+        .card__title {
+            @media(min-width: $fhd) {
+                font-size: 18px;
+            }
+        }
+
+        .card__rating-block {
+            @media(min-width: $hd) {
+                align-self: flex-start;
+                order: -1;
+            }
+            @media(min-width: $fhd) {
+                margin-bottom: 16px;
+            }
+        }
+
+        .card__chars {
+            font-size: 12px;
+            @media(max-width: $hd - 1px) {
+                display: none;
+            }
+            @media(min-width: $fhd) {
+                font-size: 16px;
+            }
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                b {
+                    font-weight: 600;
+                }
+            }
+
+            ul {
+                li {
+                    padding-left: 24px;
+                    position: relative;
+                    z-index: 0;
+
+                    &::before {
+                        content: '•';
+                        left: 10px;
+                        position: absolute;
+                        transform: translateX(-50%);
+                        top: 0;
+                        z-index: 0;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        .card__label {
+            @media(min-width: $hd) {
+                top: 16px;
+            }
+            @media(min-width: $fhd) {
+                top: 24px;
+            }
+        }
+
+        .card__slider-colors {
+            @media(min-width: $hd) {
+                border-radius: 8px;
+                background: radial-gradient(51.84% 58.28% at 42.63% 71.6%, #3A3C59 0%, #0C1117 100%);
+                order: 1;
+                width: 230px;
+            }
+            @media(min-width: $fhd) {
+                width: 340px;
+            }
+        }
+
+        .card__slider-block {
+            img {
+                @media(max-width: $hd - 1px) {
+                    max-width: 230px;
+                }
+            }
+        }
+
+        .card__colors {
+            @media(min-width: $hd) {
+                margin-top: -60px;
+            }
+        }
+
+        .card__colors-list-item {
+            @media(min-width: $hd) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        .card__color {
+            @media(min-width: $hd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        .card__buy-block {
+            @media(min-width: $hd) {
+                align-items: flex-start;
+                flex-direction: column;
+                margin-left: auto;
+                order: 3;
+            }
+
+            .btn {
+                &:not(:last-child) {
+                    @media(min-width: $hd) {
+                        margin-right: 0;
+                        margin-bottom: 12px;
+                    }
+                }
+                @media(min-width: $hd) and (max-width: 1349px) {
+                    font-size: 14px;
+                }
+                @media(min-width: $hd) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .card__price-block {
+            margin-bottom: 12px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        .card__price {
+            @media(min-width: $hd) and (max-width: 1349px) {
+                font-size: 18px;
+            }
+            @media(min-width: $fhd) {
+                font-size: 28px;
+            }
+        }
+
+        .card__config-button {
+            @media(max-width: $hd - 1px) {
+                bottom: 24px;
+                left: 50%;
+                position: absolute;
+                padding-left: 16px;
+                padding-right: 16px;
+                transform: translateX(-50%);
+                top: auto;
+                z-index: 1;
+            }
+        }
+
+        .card__bottom {
+            @media(min-width: $hd) {
+                display: none;
+            }
+        }
+    }
 }
 
 .card {
     background-color: #020405;
-    border-radius: 4px 4px 0 0;
+    border-radius: 12px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 354px;
+    max-width: 400px;
+    padding-bottom: 74px;
+    position: relative;
+    z-index: 1;
     @media(min-width: $sm) {
-        box-shadow: 0 0 8px 0 rgba($main_color, 0.5);
-        border-radius: 12px;
-        max-width: 616px;
+        max-width: 100%;
     }
 
     &--blue {
@@ -124,7 +390,6 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        position: relative;
         padding: 24px 0;
         @media(min-width: $sm) {
             border-radius: 12px 12px 0 0;
@@ -215,53 +480,42 @@
     }
 
     &__title {
-        font-size: 18px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 900;
         line-height: 1.11111;
         letter-spacing: 0.54px;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         text-transform: uppercase;
         text-align: center;
-        @media(min-width: $sm) {
-            font-size: 24px;
-            font-weight: 900;
-            line-height: 1.33333;
-            letter-spacing: 0.72px;
-            margin-bottom: 8px;
-        }
     }
 
     &__rating-block {
         align-self: center;
         display: flex;
         justify-content: center;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
 
     &__rating {
         align-items: center;
         color: #fff;
         display: flex;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         margin: 0;
-        @media(min-width: $sm) {
-            font-size: 24px;
-            line-height: 1.33333;
-        }
 
         svg {
             fill: #EAAC52;
-            height: 24px;
-            min-width: 24px;
-            margin-right: 8px;
-            width: 24px;
+            height: 16px;
+            min-width: 16px;
+            margin-right: 4px;
+            width: 16px;
         }
 
         & + .card__order-time {
             margin-left: 8px;
             @media(min-width: $sm) {
-                margin-left: 16px;
+                margin-left: 12px;
             }
         }
     }
@@ -271,31 +525,12 @@
         border: 2px solid #EAAC52;
         background-color: rgba(#EAAC52, 0.3);
         color: #fff;
-        font-size: 16px;
+        font-size: 10px;
         font-weight: 600;
-        height: 32px;
-        line-height: 1.25;
+        height: 20px;
+        line-height: 1;
         margin: 0;
-        padding: 5px 13px 4px;
-    }
-
-    &__settings-block {
-        height: 32px;
-        left: auto;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 32px;
-        z-index: 2;
-        @media(min-width: $fhd) {
-            height: 40px;
-            width: 40px;
-        }
-        @media(min-width: $ufhd) {
-            height: 48px;
-            width: 48px;
-        }
+        padding: 4px 10px;
     }
 
     &__settings-opener {
@@ -303,6 +538,7 @@
         border: none;
         cursor: pointer;
         height: 32px;
+        margin-left: 12px;
         padding: 0;
         width: 32px;
         @media(min-width: $fhd) {
@@ -325,114 +561,6 @@
         }
     }
 
-    &__settings {
-        background-color: #0C1117;
-        border-radius: 4px;
-        box-shadow: 0 4px 40px 0 rgba($main_color, 0.25);
-        display: none;
-        left: auto;
-        position: absolute;
-        padding: 14px 46px 32px;
-        right: -12px;
-        top: -12px;
-        width: 354px;
-        z-index: 1;
-        @media(min-width: $fhd) {
-            padding-bottom: 50px;
-            padding-left: 108px;
-            padding-right: 108px;
-            width: 478px;
-        }
-
-        &.is-open {
-            display: block;
-        }
-
-        .btns-group {
-            background-color: transparent;
-            padding: 0;
-            width: 100%;
-
-            &:not(:last-child) {
-                margin-bottom: 24px;
-            }
-        }
-
-        .btns-group__item {
-            padding-left: 5px;
-            padding-right: 5px;
-
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-
-        .btns-group__item-inner {
-            min-width: 0;
-            min-height: 48px;
-            padding-left: 8px;
-            padding-right: 8px;
-        }
-    }
-
-    &__settings-closer {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        height: 48px;
-        left: auto;
-        padding: 0;
-        position: absolute;
-        right: 2px;
-        top: 2px;
-        width: 48px;
-        z-index: 1;
-        @media(min-width: $fhd) {
-            height: 60px;
-            width: 60px;
-        }
-
-        svg {
-            fill: #fff;
-            height: 20px;
-            width: 20px;
-            @media(min-width: $fhd) {
-                height: 30px;
-                width: 30px;
-            }
-        }
-    }
-
-    &__settings-title {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1.77777;
-        letter-spacing: 0.54px;
-        margin-bottom: 24px;
-        text-transform: uppercase;
-        text-align: center;
-        @media(min-width: $fhd) {
-            font-size: 24px;
-            line-height: 1.33333;
-            letter-spacing: 0.72px;
-            margin-bottom: 30px;
-        }
-    }
-
-    &__settings-subtitle {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.44444;
-        letter-spacing: 0.18px;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
     &__label {
         align-items: center;
         border-radius: 0 4px 4px 0;
@@ -443,21 +571,12 @@
         justify-content: center;
         line-height: 1.25;
         left: 0;
-        min-height: 40px;
+        min-height: 32px;
         padding: 8px 12px;
         position: absolute;
-        top: 112px;
+        top: 80px;
         text-transform: uppercase;
         z-index: 2;
-        @media(min-width: $sm) {
-            font-size: 16px;
-            min-height: 48px;
-            padding: 12px 24px;
-            top: 104px;
-        }
-        @media(min-width: $hd) {
-            top: 98px;
-        }
 
         &--type_1 {
             background-image: linear-gradient(266.66deg, #6891E3 0.4%, #476399 94.55%);
@@ -487,21 +606,15 @@
     }
 
     &__slider-block {
-        margin-bottom: 24px;
-        @media(min-width: $sm) {
-            margin-top: -20px;
-            margin-bottom: -20px;
-        }
-
         .swiper-slide {
             text-align: center;
         }
 
         img {
-            max-width: 205px;
-            @media(min-width: $sm) {
-                max-width: 390px;
-            }
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
 
         .swiper-button-next,
@@ -513,21 +626,13 @@
             box-shadow: 0 0 16px 0 rgba(#fff, 0.5);
             cursor: pointer;
             display: flex;
-            height: 32px;
+            height: 24px;
             justify-content: center;
             margin-top: 0;
             padding: 0;
             transform: translateY(-50%);
-            width: 32px;
+            width: 24px;
             z-index: 1;
-            @media(min-width: $fhd) {
-                height: 40px;
-                width: 40px;
-            }
-            @media(min-width: $ufhd) {
-                height: 48px;
-                width: 48px;
-            }
 
             &::after {
                 display: none;
@@ -535,43 +640,17 @@
 
             svg {
                 fill: #fff;
-                height: 20px;
-                width: 20px;
-                @media(min-width: $fhd) {
-                    height: 24px;
-                    width: 24px;
-                }
-                @media(min-width: $ufhd) {
-                    height: 28px;
-                    width: 28px;
-                }
+                height: 12px;
+                width: 12px;
             }
         }
 
         .swiper-button-prev {
-            left: 16px;
-            @media(min-width: $sm) {
-                left: 20px;
-            }
-            @media(min-width: $fhd) {
-                left: 40px;
-            }
-            @media(min-width: $ufhd) {
-                left: 64px;
-            }
+            left: 12px;
         }
 
         .swiper-button-next {
-            right: 16px;
-            @media(min-width: $sm) {
-                right: 20px;
-            }
-            @media(min-width: $fhd) {
-                right: 40px;
-            }
-            @media(min-width: $ufhd) {
-                right: 64px;
-            }
+            right: 12px;
         }
 
         & + .card__buy-block {
@@ -602,26 +681,13 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        position: relative;
-        z-index: 1;
 
         .btn {
-            font-size: 11px;
+            font-size: 16px;
             min-width: 105px;
+            min-height: 32px;
             padding-left: 8px;
             padding-right: 8px;
-            @media(min-width: $sm) {
-                box-shadow: 0 4px 4px 0 rgba(#000, 0.25);
-                font-size: 14px;
-                font-weight: 800;
-                min-width: 164px;
-                min-height: 40px;
-                padding-top: 6px;
-                padding-bottom: 6px;
-            }
-            @media(min-width: $hd) {
-                font-size: 16px;
-            }
 
             &:not(:last-child) {
                 margin-right: 8px;
@@ -637,31 +703,18 @@
 
     &__price-block {
         &:not(:last-child) {
-            margin-right: 8px;
-            @media(min-width: $sm) {
-                margin-right: 16px;
-            }
-            @media(min-width: $fhd) {
-                margin-right: 24px;
-            }
+            margin-right: 12px;
         }
     }
 
     &__price {
         color: #fff;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 900;
         line-height: 1.33333;
         letter-spacing: 0.5px;
         margin: 0;
         white-space: nowrap;
-        @media(min-width: $sm) {
-            font-size: 24px;
-            line-height: 1.25;
-        }
-        @media(min-width: $fhd) {
-            font-size: 32px;
-        }
     }
 
     &__credit {
@@ -702,71 +755,32 @@
         }
     }
 
-    &__bottom {
-        padding-top: 12px;
-        padding-bottom: 6px;
-        @media(min-width: $sm) {
-            padding-bottom: 40px;
-        }
-        @media(min-width: $fhd) {
-            padding-top: 16px;
-            padding-bottom: 34px;
-        }
-        @media(min-width: $ufhd) {
-            padding-bottom: 60px;
-        }
-    }
+    &__bottom {}
 
     &__info {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 24px;
-        @media(min-width: $sm) {
-            margin-bottom: 40px;
-            padding-left: 26px;
-            padding-right: 26px;
-        }
-        @media(min-width: $fhd) {
-            margin-bottom: 32px;
-            padding-left: 0;
-            padding-right: 0;
-        }
-        @media(min-width: $ufhd) {
-            margin-bottom: 56px;
-            padding-left: 32px;
-            padding-right: 32px;
-        }
+        margin-bottom: 16px;
     }
 
     &__info-block {
-        font-size: 8px;
+        font-size: 10px;
         line-height: 1.5;
-        padding-top: 18px;
+        padding-top: 16px;
         padding-bottom: 10px;
         text-align: center;
         width: 33.33333%;
-        @media(min-width: $sm) {
-            font-size: 12px;
-            line-height: 1.33333;
-            padding: 24px 8px 8px;
-        }
     }
 
     &__info-title {
         background: -webkit-linear-gradient(45deg, #3B81EA, #00C0FA);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 800;
         line-height: 1.66666;
         letter-spacing: 0.36px;
         margin-bottom: 2px;
-        @media(min-width: $sm) {
-            font-size: 18px;
-            line-height: 1.33333;
-            letter-spacing: 0.54px;
-            margin-bottom: 6px;
-        }
 
         &--red {
             background: -webkit-linear-gradient(45deg, #D63E36, #C80A1D);
@@ -776,17 +790,15 @@
     }
 
     &__graphs {
-        margin-bottom: 40px;
-        padding-left: 14px;
-        padding-right: 14px;
-        @media(min-width: $sm) {
-            margin-bottom: 36px;
-            padding-left: 40px;
-            padding-right: 40px;
-        }
+        //margin-bottom: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     &__graphs-title {
+        align-items: center;
+        display: flex;
+        justify-content: center;
         font-size: 16px;
         font-weight: 700;
         line-height: 1.11111;
@@ -795,11 +807,6 @@
         position: relative;
         text-align: center;
         text-transform: uppercase;
-        @media(min-width: $sm) {
-            font-size: 18px;
-            line-height: 1.77777;
-            margin-bottom: 10px;
-        }
     }
 
     &__buttons {
@@ -807,18 +814,14 @@
         justify-content: center;
 
         .btn {
+            font-size: 16px;
             margin-left: 8px;
             margin-right: 8px;
-            @media(min-width: $sm) {
-                min-height: 48px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
         }
     }
 
     &__colors {
-        margin: -42px auto 12px;
+        margin: -12px auto 12px;
         position: relative;
         z-index: 2;
     }

@@ -1,7 +1,11 @@
 .params {
     background-color: #0C1117;
     border-radius: 8px;
+    height: 100%;
     padding-top: 16px;
+    @media(min-width: $hd) {
+        height: auto;
+    }
     @media(min-width: $fhd) {
         box-shadow: 0 0 8px 0 rgba($main_color, 0.5);
         border-radius: 12px;
@@ -237,6 +241,11 @@
         line-height: 1.25;
         padding: 12px 24px;
         text-decoration: underline;
+        width: 100%;
+
+        &:hover {
+            background-color: rgba(#fff, 0.1);
+        }
 
         &.is-active {
             svg {

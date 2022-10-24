@@ -1,4 +1,16 @@
+//тогглер параметров
+$(document).on('click', '.js-params-toggler', function () {
+  $('.config__left-block').toggleClass('is-open');
+  return false;
+});
 
+//закрытие параметров
+$(document).on('click', '.js-params-closer', function () {
+  $('.config__left-block').removeClass('is-open');
+  return false;
+});
+
+//тогглер раздела параметров
 $(document).on('click', '.js-section-toggler', function () {
   $(this).toggleClass('is-active');
   $(this).closest('.params__section').find('.params__section-dropdown').slideToggle(function () {
@@ -8,6 +20,7 @@ $(document).on('click', '.js-section-toggler', function () {
   return false;
 });
 
+//тогглер списка чекбоксов
 $(document).on('click', '.js-list-toggler', function () {
   if(!$(this).hasClass('is-active')) {
     $(this).addClass('is-active');
@@ -22,6 +35,7 @@ $(document).on('click', '.js-list-toggler', function () {
   return false;
 });
 
+//тогглер подраздела парамтров
 $(document).on('click', '.js-subsection-toggler', function () {
   $(this).toggleClass('is-active');
   $(this).closest('.params__subsection').find('.params__subsection-dropdown').slideToggle(function () {
